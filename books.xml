@@ -1,0 +1,25 @@
+<?xml version="1.0"?> 
+<bookslist title="Books">
+<book> 
+	<Title>Feeling Good: The New Mood Therapy</Title>
+	<Author>David D. Burns, M.D.</Author> 
+	<Publication_year>1980</Publication_year>
+	<Pages>736</Pages> 
+	<Publisher>Harper Collins</Publisher> 
+
+</book>
+<book> 
+	<Title>The Archer</Title>
+	<Author>Paulo Coelho</Author> 
+	<Publication_year>2020</Publication_year>
+	<Pages>160</Pages> 
+	<Publisher>Knopf</Publisher> 
+</book>
+<book> 
+	<Title>The Power of Moments: Why Certain Experiences Have Extraordinary Impact</Title>
+	<Author>Chip Heath and Dan Heath</Author> 
+	<Publication_year>2017</Publication_year>
+	<Pages>320</Pages> 
+	<Publisher>Simon &amp; Schuster</Publisher> 
+</book>
+</bookslist> 
