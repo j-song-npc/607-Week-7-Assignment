@@ -1,0 +1,50 @@
+---
+title: "607 Week 7 Assignment"
+author: "Jane Song"
+date: "2025-03-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## html
+```{r html}
+library(rvest)
+library(dplyr)
+
+
+html_file <- read_html("https://raw.githubusercontent.com/j-song-npc/607-Week-7-Assignment/refs/heads/main/books.html")
+html_file <- html_table(html_file)
+html_file <- as.data.frame(html_file)
+
+glimpse(html_file)
+```
+
+## xml 
+```{r xml}
+library(RCurl)
+library(XML)
+
+xml_file <- "https://raw.githubusercontent.com/j-song-npc/607-Week-7-Assignment/refs/heads/main/books.xml"
+
+RCurladdress <- getURL(xml_file)
+xml_file <- xmlToDataFrame(xmlParse(getURL(xml_file)))
+ 
+glimpse(xml_file)
+```
+
+## json
+```{r json}
+library(jsonlite)
+
+json_file <-fromJSON("https://raw.githubusercontent.com/j-song-npc/607-Week-7-Assignment/refs/heads/main/books.json")
+
+glimpse(json_file)
+```
+
+
+## Conclusion
+
+Using the above methods to load my files into R studio, the data frames appear to be identical. However, my xml data frame seems to qualify all columns as characters while the html and json data frames characterize numerical columns (Publication year and pages) as integers. I also found that the xml file was trickiest to load in as I had to try many different methods before successfully finding one that worked. Due to these 2 features, I think my preference would be to work in json or html unless there is other rationale why xml is more efficient. 
